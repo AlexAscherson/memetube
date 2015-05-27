@@ -1,0 +1,10 @@
+Test
+
+<a href="/items/new">Make new</a>
+
+<ul>
+<% @items.each do |item| %>
+ <li> <a href="/items/<%= item['id'] %>"><%= item['item'] %> | <%= item['details'] %> </a> </li>
+  <% end %>
+
+  </ul>
