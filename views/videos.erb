@@ -1,0 +1,20 @@
+Welcome to memetube
+
+<a href="/videos/new">Make new</a>
+
+
+<ul>
+<% @videos.each do |video| %>
+ <li> 
+  <a href="/items/<%= video['id'] %>">
+    <%= video['title'] %>  
+    <%= video['description'] %>
+    <%= video['genre'] %> 
+    </a> 
+      </li>
+  <% end %>
+  </ul>
+
+  <!-- videos returns * here so we loop through each and print out contents of column names.  the link uses the id column to make a link to the 'node' page of the item. -->
+
+  
