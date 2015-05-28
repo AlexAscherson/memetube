@@ -60,7 +60,7 @@ get '/' do
   # with corresponding :names and update them into the row we selected with our id param 
   # in the where statement.
 
-  delete 'videos/:id/delete' do
+  delete '/videos/:id/delete' do
     sql = "DELETE FROM videos WHERE id = '#{params[:id]}'"
     run_sql(sql)
     redirect to ('/videos')
