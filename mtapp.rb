@@ -41,7 +41,7 @@ get '/' do
   # This is a display page, so just one fav is going to show up here.
 
   get '/videos/:id/edit' do
-    sql = "select * from videos where id=#{params:id}"
+    sql = "select * from videos where id=#{params:[id]}"
     @video = run_sql(sql).first
     erb :edit
   end
