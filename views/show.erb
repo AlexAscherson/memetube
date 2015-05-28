@@ -1,10 +1,14 @@
-<%= @item['item'] %>
-<%= @item['details'] %>
+<%= @video['title'] %>
+<%= @video['description'] %>
+<%= @video['url'] %>
+<%= @video['genre'] %>
 
-<a href="/items/<%=@item['id'] %>/edit">Edit</a>
+<a href="/videos/<%=@video['id'] %>/edit">Edit</a>
 
-<form action ="/items/<%=@item['id'] %>/delete" method= "POST"> 
+<form action ="/videos/<%=@video['id'] %>/delete" method= "POST"> 
   <button name = "_method" value = "delete"> Delete this</button>
+
+<!-- delete special case, sends id to /delete call via post.  not 100% sure about _method. -->
 
 </form>
 

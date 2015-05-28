@@ -1,7 +1,17 @@
-<h1>I am the edit page</h1>
+<h1>Edit your video</h1>
 
-<form action="/items/<%= @item['id'] %>" method="POST">
-  <input type="text" name="item" id="item" value="<%= @item['item'] %>" autofocus>
-  <input type="text" name="details" id="details" value="<%= @item['details'] %>">
-  <button>Save item</button>
+<form action="/videos/<%= @video['id'] %>" method="POST">
+<!-- note method post here to send stuff -->
+
+  <input type="text" name="title" id="title" value="<%= @video['title'] %>" autofocus>
+  <input type="text" name="description" id="description" value="<%= @video['description'] %>">
+  <input type="text" name="url" id="url" value="<%= @video['url'] %>">
+  <input type="text" name="genre" id="genre" value="<%= @video['genre'] %>">
+
+  <!-- Because we are editing the start value is whats stored in the db.  Calling it via global variable thats been set to 'this' video via url -->
+
+
+
+
+  <button>Save</button>
 </form>
